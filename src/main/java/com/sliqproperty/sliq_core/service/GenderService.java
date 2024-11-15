@@ -15,8 +15,8 @@ public class GenderService {
     @Autowired
     private GenderRepository genderRepository;
 
-    public void saveGender(Gender gender) {
-        genderRepository.save(gender);
+    public Gender saveGender(Gender gender) {
+        return genderRepository.save(gender);
     }
 
     public List<Gender> getAllGenders() {

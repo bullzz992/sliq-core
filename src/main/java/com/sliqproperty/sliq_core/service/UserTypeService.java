@@ -15,8 +15,8 @@ public class UserTypeService {
     @Autowired
     private UserTypeRepository userTypeRepository;
 
-    public void saveUserType(UserType userType) {
-        userTypeRepository.save(userType);
+    public UserType saveUserType(UserType userType) {
+        return userTypeRepository.save(userType);
     }
 
     public List<UserType> getAllUserTypes() {

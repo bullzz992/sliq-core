@@ -12,18 +12,18 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "UserType")
+@Table(name = "\"UserType\"")
 public class UserType {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "IdUserType", nullable = false)
+    @Column(name = "\"IdUserType\"", nullable = false)
     private long idUserType;
 
-    @Column(name = "Name", nullable = false)
+    @Column(name = "\"Name\"", nullable = false)
     private String name;
 
-    @Column(name = "Description", nullable = false)
+    @Column(name = "\"Description\"", nullable = false)
     private String Description;
 
 }

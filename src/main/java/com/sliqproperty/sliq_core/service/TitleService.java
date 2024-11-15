@@ -15,8 +15,8 @@ public class TitleService {
     @Autowired
     private TitleRepository titleRepository;
 
-    public void saveTitle(Title title) {
-        titleRepository.save(title);
+    public Title saveTitle(Title title) {
+        return titleRepository.save(title);
     }
 
     public List<Title> getAllTitles() {

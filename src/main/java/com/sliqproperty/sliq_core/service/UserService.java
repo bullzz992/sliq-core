@@ -15,17 +15,17 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public void saveUser(User user) {
-        userRepository.save(user);
+    public User saveUser(User user) {
+        return userRepository.save(user);
     }
 
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
 
-    public User getUserById(long id) {
+    public Optional<User> getUserById(long id) {
         Optional<User> user = userRepository.findById(id);
-        return user.orElse(null);
+        return user;
     }
 
     public List<User> getUsersByStatus(Status_Enum status) {
@@ -33,8 +33,13 @@ public class UserService {
         return users.orElse(null);
     }
 
-    public List<User> getUserByIDNumber(String idNumber) {
-        Optional<List<User>> user = Optional.ofNullable(userRepository.findByIdNUmber(idNumber));
+    public User getUserByIDNumber(String idNumber) {
+        Optional<User> user = Optional.ofNullable(userRepository.findByIdNUmber(idNumber));
+        return user.orElse(null);
+    }
+
+    public User getUserByMobileNumber(String mobileNumber) {
+        Optional<User> user = Optional.ofNullable(userRepository.findByMobileNumber(mobileNumber));
         return user.orElse(null);
     }
 

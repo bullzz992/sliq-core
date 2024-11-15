@@ -12,16 +12,16 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "Title")
+@Table(name = "\"Title\"")
 public class Title {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "IdTitle", nullable = false)
+    @Column(name = "\"IdTitle\"", nullable = false)
     private long IdTitle;
 
-    @Column(name = "Name", nullable = false)
+    @Column(name = "\"Name\"", nullable = false)
     private String name;
 
-    @Column(name = "Description", nullable = false)
+    @Column(name = "\"Description\"", nullable = false)
     private String Description;
 }

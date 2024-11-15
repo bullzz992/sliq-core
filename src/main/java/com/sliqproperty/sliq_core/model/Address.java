@@ -12,28 +12,28 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "Address")
+@Table(name = "\"Address\"")
 public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "IdAddress", nullable = false)
+    @Column(name = "\"IdAddress\"", nullable = false)
     private long idAddress;
 
-    @Column(name = "Line1", nullable = false)
+    @Column(name = "\"Line1\"", nullable = false)
     private String line1;
 
-    @Column(name = "Line2", nullable = true)
+    @Column(name = "\"Line2\"", nullable = true)
     private String line2;
 
-    @Column(name = "Suburb", nullable = false)
+    @Column(name = "\"Suburb\"", nullable = false)
     private String suburb;
 
-    @Column(name = "City", nullable = false)
+    @Column(name = "\"City\"", nullable = false)
     private String city;
 
-    @Column(name = "Province", nullable = false)
+    @Column(name = "\"Province\"", nullable = false)
     private String province;
 
-    @Column(name = "Code", nullable = false)
+    @Column(name = "\"Code\"", nullable = false)
     private String code;
 }

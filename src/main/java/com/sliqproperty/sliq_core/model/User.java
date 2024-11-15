@@ -18,66 +18,66 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "User")
+@Table(name = "\"User\"")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "IdUser", nullable = false)
+    @Column(name = "\"IdUser\"", nullable = false)
     private long idUser;
 
-    @Column(name = "FirstName", nullable = false)
+    @Column(name = "\"FirstName\"", nullable = false)
     private String firstName;
 
-    @Column(name = "LastName", nullable = false)
+    @Column(name = "\"LastName\"", nullable = false)
     private String lastName;
 
-    @Column(name = "Email", nullable = false)
+    @Column(name = "\"Email\"", nullable = false)
     private String email;
 
-    @Column(name = "MobileNUmber", nullable = false)
+    @Column(name = "\"MobileNumber\"", nullable = false)
     private String mobileNumber;
 
-    @Column(name = "IDNumber", nullable = true)
+    @Column(name = "\"IDNumber\"", nullable = true)
     private String idNUmber;
 
-    @Column(name = "Passport", nullable = true)
+    @Column(name = "\"Passport\"", nullable = true)
     private String passport;
 
-    @Column(name = "PasswordHash", nullable = false)
-    private String passwordHas;
+    @Column(name = "\"PasswordHash\"", nullable = false)
+    private String passwordHash;
 
-    @Column(name = "CreatedAt", nullable = false)
+    @Column(name = "\"CreatedAt\"", nullable = false)
     private LocalDateTime createdAt;
 
-    @Column(name = "UpdatedAt", nullable = false)
+    @Column(name = "\"UpdatedAt\"", nullable = false)
     private LocalDateTime updatedAt;
 
     @Enumerated(EnumType.STRING)
-    @Column(name = "Status", nullable = false)
+    @Column(name = "\"Status\"", nullable = false)
     private Status_Enum status;
 
     // FKs
 
     @ManyToOne
-    @JoinColumn(name = "idUserType", nullable = false)
+    @JoinColumn(name = "\"IdUserType\"", nullable = false)
     private UserType userType;
 
     @ManyToOne
-    @JoinColumn(name = "idGender", nullable = false)
+    @JoinColumn(name = "\"IdGender\"", nullable = false)
     private Gender gender;
 
     @ManyToOne
-    @JoinColumn(name = "idAddress", nullable = true)
+    @JoinColumn(name = "\"IdAddress\"", nullable = true)
     private Address address;
 
     @ManyToOne
-    @JoinColumn(name = "idTitle", nullable = false)
+    @JoinColumn(name = "\"IdTitle\"", nullable = false)
     private Title title;
 
     public enum Status_Enum {
-        Active,
-        NotVerified,
-        Suspended
+        ACTIVE,
+        NOTVERIFIED,
+        SUSPENDED
     }
 
 }

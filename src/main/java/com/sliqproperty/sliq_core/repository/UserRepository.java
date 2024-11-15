@@ -13,7 +13,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     public List<User> findByStatus(Status_Enum status);
 
-    List<User> findByIdNUmber(String idNUmber);
+    User findByIdNUmber(String idNUmber);
 
-    List<User> findByMobileNumber(String mobileNumber);
+    User findByMobileNumber(String mobileNumber);
 }
